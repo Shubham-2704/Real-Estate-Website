@@ -1,0 +1,292 @@
+{% extends 'other-ft-ht.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- BREADCRUMB AREA START -->
+    <div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image "  data-bs-bg="{% static 'img/bg/14.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ltn__breadcrumb-inner">
+                        <h1 class="page-title">Frequently asked questions</h1>
+                        <div class="ltn__breadcrumb-list">
+                            <ul>
+                                <li><a href="index.html"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Home</a></li>
+                                <li>FAQ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMB AREA END -->
+
+    <!-- FAQ AREA START (faq-2) (ID > accordion_2) -->
+    <div class="ltn__faq-area mb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="ltn__faq-inner ltn__faq-inner-2">
+                        <div id="accordion_2">
+                            {% for FAQ in faq_details %}
+                            <!-- card -->
+                            <div class="card">
+                                <h6 class="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-1" aria-expanded="false">
+                                    {{FAQ.Faq_question}}
+                                </h6>
+                                <div id="faq-item-2-1" class="collapse" data-bs-parent="#accordion_2">
+                                    <div class="card-body">
+                                        <p>{{FAQ.Faq_description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="need-support text-center mt-100">
+                            <h2>{{FAQ.faq_help}}</h2>
+                            <div class="btn-wrapper mb-30">
+                                <a href="{% url 'contact.html' %}" class="theme-btn-1 btn">Contact Us</a>
+                            </div>
+                            <h3><i class="fas fa-phone"></i> {{FAQ.faq_contact}}</h3>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <aside class="sidebar-area ltn__right-sidebar">
+                        
+                        <!-- Banner Widget -->
+                        <div class="widget ltn__banner-widget">
+                            <a href="{% url 'shop-grid.html' %}"><img src="{% static 'img/banner/banner-3.jpg' %}" alt="Banner Image"></a>
+                        </div>
+
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ AREA START -->
+
+    <!-- COUNTER UP AREA START -->
+    <div class="ltn__counterup-area section-bg-1 pt-120 pb-70">
+        <div class="container">
+            <div class="row">
+                {% for FAQ in faq_details %}
+                <div class="col-md-3 col-sm-6 align-self-center">
+                    <div class="ltn__counterup-item text-color-white---">
+                        <div class="counter-icon">
+                            <i class="flaticon-select"></i>
+                        </div>
+                        <h1><span class="counter">{{FAQ.faq_total_area_sq}}</span><span class="counterUp-icon">+</span> </h1>
+                        <h6>Total Area Sq</h6>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6 align-self-center">
+                    <div class="ltn__counterup-item text-color-white---">
+                        <div class="counter-icon">
+                            <i class="flaticon-office"></i>
+                        </div>
+                        <h1><span class="counter">{{FAQ.faq_apartment_sold}}</span><span class="counterUp-letter">K</span><span class="counterUp-icon">+</span> </h1>
+                        <h6>Apartments Sold</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 align-self-center">
+                    <div class="ltn__counterup-item text-color-white---">
+                        <div class="counter-icon">
+                            <i class="flaticon-excavator"></i>
+                        </div>
+                        <h1><span class="counter">{{FAQ.faq_constrution}}</span><span class="counterUp-icon">+</span> </h1>
+                        <h6>Total Constructions</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 align-self-center">
+                    <div class="ltn__counterup-item text-color-white---">
+                        <div class="counter-icon">
+                            <i class="flaticon-armchair"></i>
+                        </div>
+                        <h1><span class="counter">{{FAQ.faq_rooms}}</span><span class="counterUp-icon">+</span> </h1>
+                        <h6>Apartio Rooms</h6>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- COUNTER UP AREA END -->
+
+    <!-- BLOG AREA START (blog-3) -->
+    <div class="ltn__blog-area pt-120 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2--- text-center">
+                        <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">News & Blogs</h6>
+                        <h1 class="section-title">Leatest News Feeds</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row  ltn__blog-slider-one-active slick-arrow-1 ltn__blog-item-3-normal">
+                <!-- Blog Item -->
+                <div class="col-lg-12">
+                    <div class="ltn__blog-item ltn__blog-item-3">
+                        <div class="ltn__blog-img">
+                            <a href="#"><img src="{% static 'img/blog/1.jpg' %}" alt="#"></a>
+                        </div>
+                        <div class="ltn__blog-brief">
+                            <div class="ltn__blog-meta">
+                                <ul>
+                                    <li class="ltn__blog-author">
+                                        <a href="#"><i class="far fa-user"></i>by: Admin</a>
+                                    </li>
+                                    <li class="ltn__blog-tags">
+                                        <a href="#"><i class="fas fa-tags"></i>Decorate</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3 class="ltn__blog-title"><a href="Newsdetails\{{News.News_Title}}">10 Brilliant Ways To Decorate Your Home</a></h3>
+                            <div class="ltn__blog-meta-btn">
+                                <div class="ltn__blog-meta">
+                                    <ul>
+                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>June 24, 2021</li>
+                                    </ul>
+                                </div>
+                                <div class="ltn__blog-btn">
+                                    <a href="Newsdetails\{{News.News_Title}}">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Item -->
+                <div class="col-lg-12">
+                    <div class="ltn__blog-item ltn__blog-item-3">
+                        <div class="ltn__blog-img">
+                            <a href="Newsdetails\{{News.News_Title}}"><img src="{% static 'img/blog/2.jpg' %}" alt="#"></a>
+                        </div>
+                        <div class="ltn__blog-brief">
+                            <div class="ltn__blog-meta">
+                                <ul>
+                                    <li class="ltn__blog-author">
+                                        <a href="#"><i class="far fa-user"></i>by: Admin</a>
+                                    </li>
+                                    <li class="ltn__blog-tags">
+                                        <a href="#"><i class="fas fa-tags"></i>Interior</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3 class="ltn__blog-title"><a href="Newsdetails\{{News.News_Title}}">The Most Inspiring Interior Design Of 2021</a></h3>
+                            <div class="ltn__blog-meta-btn">
+                                <div class="ltn__blog-meta">
+                                    <ul>
+                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>July 23, 2021</li>
+                                    </ul>
+                                </div>
+                                <div class="ltn__blog-btn">
+                                    <a href="Newsdetails\{{News.News_Title}}">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Item -->
+                <div class="col-lg-12">
+                    <div class="ltn__blog-item ltn__blog-item-3">
+                        <div class="ltn__blog-img">
+                            <a href="#"><img src="{% static 'img/blog/3.jpg' %}" alt="#"></a>
+                        </div>
+                        <div class="ltn__blog-brief">
+                            <div class="ltn__blog-meta">
+                                <ul>
+                                    <li class="ltn__blog-author">
+                                        <a href="#"><i class="far fa-user"></i>by: Admin</a>
+                                    </li>
+                                    <li class="ltn__blog-tags">
+                                        <a href="#"><i class="fas fa-tags"></i>Estate</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3 class="ltn__blog-title"><a href="Newsdetails\{{News.News_Title}}">Recent Commercial Real Estate Transactions</a></h3>
+                            <div class="ltn__blog-meta-btn">
+                                <div class="ltn__blog-meta">
+                                    <ul>
+                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>May 22, 2021</li>
+                                    </ul>
+                                </div>
+                                <div class="ltn__blog-btn">
+                                    <a href="Newsdetails\{{News.News_Title}}">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Item -->
+                <div class="col-lg-12">
+                    <div class="ltn__blog-item ltn__blog-item-3">
+                        <div class="ltn__blog-img">
+                            <a href="#"><img src="{% static 'img/blog/4.jpg' %}" alt="#"></a>
+                        </div>
+                        <div class="ltn__blog-brief">
+                            <div class="ltn__blog-meta">
+                                <ul>
+                                    <li class="ltn__blog-author">
+                                        <a href="#"><i class="far fa-user"></i>by: Admin</a>
+                                    </li>
+                                    <li class="ltn__blog-tags">
+                                        <a href="#"><i class="fas fa-tags"></i>Room</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3 class="ltn__blog-title"><a href="Newsdetails\{{News.News_Title}}">Renovating a Living Room? Experts Share Their Secrets</a></h3>
+                            <div class="ltn__blog-meta-btn">
+                                <div class="ltn__blog-meta">
+                                    <ul>
+                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>June 24, 2021</li>
+                                    </ul>
+                                </div>
+                                <div class="ltn__blog-btn">
+                                    <a href="Newsdetails\{{News.News_Title}}">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Item -->
+                <div class="col-lg-12">
+                    <div class="ltn__blog-item ltn__blog-item-3">
+                        <div class="ltn__blog-img">
+                            <a href="#"><img src="{% static 'img/blog/5.jpg' %}" alt="#"></a>
+                        </div>
+                        <div class="ltn__blog-brief">
+                            <div class="ltn__blog-meta">
+                                <ul>
+                                    <li class="ltn__blog-author">
+                                        <a href="#"><i class="far fa-user"></i>by: Admin</a>
+                                    </li>
+                                    <li class="ltn__blog-tags">
+                                        <a href="#"><i class="fas fa-tags"></i>Trends</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3 class="ltn__blog-title"><a href="Newsdetails\{{News.News_Title}}">7 home trends that will shape your house in 2021</a></h3>
+                            <div class="ltn__blog-meta-btn">
+                                <div class="ltn__blog-meta">
+                                    <ul>
+                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>June 24, 2021</li>
+                                    </ul>
+                                </div>
+                                <div class="ltn__blog-btn">
+                                    <a href="Newsdetails\{{News.News_Title}}">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+        </div>
+    </div>
+    <!-- BLOG AREA END -->
+    {% endblock content %}

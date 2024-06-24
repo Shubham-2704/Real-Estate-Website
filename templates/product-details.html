@@ -1,0 +1,1080 @@
+
+{% extends 'other-ft-ht.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- BREADCRUMB AREA START -->
+    <div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image mb-0"  data-bs-bg="{% static 'img/bg/14.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ltn__breadcrumb-inner">
+                        <h1 class="page-title">Property details</h1>
+                        <div class="ltn__breadcrumb-list">
+                            <ul>
+                                <li><a href="index.html"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Home</a></li>
+                                <li>Property details</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMB AREA END -->
+
+    <!-- IMAGE SLIDER AREA START (img-slider-3) -->
+    {% comment %} <div class="ltn__img-slider-area mb-90">
+        <div class="container-fluid">
+            <div class="row ltn__image-slider-1-active slick-arrow-1 slick-arrow-1-inner ltn__no-gutter-all">
+                <div class="col-lg-12">
+                    <div class="ltn__img-slide-item-1"> 
+                        <div class="ltn__slider-area ltn__slider-1--- ltn__slider-1 section-bg-2">
+                            <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1 arrow-white slick-initialized slick-slider">
+                                <!-- ltn__slide-item -->
+                                <div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 1349px;" role="listbox"><div class="ltn__slide-item ltn__slide-item-2--- ltn__slide-item-6 text-color-white bg-image bg-overlay-theme-black-60 slick-slide slick-current slick-active" data-bs-bg="{% static 'img/slider/14.jpg' %}" data-slick-index="0" style="background-image: url(&quot;img/slider/14.jpg&quot;); width: 1349px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide00">
+                                    <div class="ltn__slide-item-inner text-center">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-12 align-self-center">
+                                                    <div class="slide-item-info">
+                                                        <div class="slide-item-info-inner ltn__slide-animation">
+                                                            <div class="slide-video mb-50">
+                                                                <a class="ltn__video-icon-2 ltn__video-icon-2-border--- border-radius-no ltn__secondary-bg" href="https://www.youtube.com/watch?v=edO11_wVmSw" data-rel="lightcase:myCollection" tabindex="0">
+                                                                    <i class="fa fa-play"></i>
+                                                                </a>
+                                                            </div>
+                                                            <h6 class="slide-sub-title white-color animated"><span><i class="fas fa-home"></i></span> Alpha Homes</h6>
+                                                            <h1 class="slide-title text-uppercase animated ">Find Your Dream <br> House By Us</h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div></div></div>
+                                <!--  -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> {% endcomment %}
+    <div class="ltn__img-slider-area mb-90">
+        <div class="container-fluid">
+            <div class="row ltn__image-slider-5-active slick-arrow-1 slick-arrow-1-inner ltn__no-gutter-all">
+                <div class="col-lg-12">
+                    <div class="ltn__img-slide-item-4"> 
+                        <a href="{% static 'img/img-slide/31.jpg' %}" data-rel="lightcase:myCollection">
+                            <img src="{% static 'img/img-slide/31.jpg' %}" alt="Image">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__img-slide-item-4">
+                        <a href="{% static 'img/img-slide/32.jpg' %}" data-rel="lightcase:myCollection">
+                            <img src="{% static 'img/img-slide/32.jpg' %}" alt="Image">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__img-slide-item-4">
+                        <a href="{% static 'img/img-slide/33.jpg' %}" data-rel="lightcase:myCollection">
+                            <img src="{% static 'img/img-slide/33.jpg' %}" alt="Image">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__img-slide-item-4">
+                        <a href="{% static 'img/img-slide/34.jpg' %}" data-rel="lightcase:myCollection">
+                            <img src="{% static 'img/img-slide/34.jpg' %}" alt="Image">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__img-slide-item-4">
+                        <a href="{% static 'img/img-slide/35.jpg' %}" data-rel="lightcase:myCollection">
+                            <img src="{% static 'img/img-slide/35.jpg' %}" alt="Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- IMAGE SLIDER AREA END -->
+
+    <!-- SHOP DETAILS AREA START -->
+    <div class="ltn__shop-details-area pb-10">
+        <div class="container">
+            <div class="row">
+                {% for p in propertydetails_page.Property_Details %}
+                <div class="col-lg-8 col-md-12">
+                    <div class="ltn__shop-details-inner ltn__page-details-inner mb-60">
+                        <div class="ltn__blog-meta">
+                            <ul>
+                                <li class="ltn__blog-category">
+                                    <a href="#">{{p.type}}</a>
+                                </li>
+                                <li class="ltn__blog-category">
+                                    <a class="bg-orange" href="#">{{p.property_type}}</a>
+                                </li>
+                                <li class="ltn__blog-date">
+                                    <i class="far fa-calendar-alt"></i>May 19, 2021
+                                </li>
+                                {% comment %} <li>
+                                    <h5><a href="#">{{p.pdf_file}}</a></h5>
+                                    
+                                </li> {% endcomment %}
+                            </ul>
+                        </div>
+                        {% comment %} anchor tag added {% endcomment %}
+                        <a href="property\{{p.property_name}}"><h1>{{p.property_name}}</h1></a>
+                        <label><span class="ltn__secondary-color"><i class="flaticon-pin"></i></span> {{p.property_location}}</label>
+                        <h4 class="title-2">Description</h4>
+                        <p>{{p.property_description}}</p>
+                        <p>{{p.property_description_2}}</p>
+
+                        <h4 class="title-2">Property Detail</h4>  
+                        <div class="property-detail-info-list section-bg-1 clearfix mb-60">                          
+                            <ul>
+                                <li><label>Property ID:</label> <span>{{p.property_id}}</span></li>
+                                <li><label>Home Area: </label> <span>{{p.property_area}}</span></li>
+                                <li><label>Rooms:</label> <span>{{p.property_rooms}}</span></li>
+                                <li><label>Baths:</label> <span>{{p.property_baths}}</span></li>
+                                <li><label>Year built:</label> <span>{{p.property_year}}</span></li>
+                            </ul>
+                            <ul>
+                                <li><label>Lot Area:</label> <span>{{p.property_lots_area}} </span></li>
+                                <li><label>Lot dimensions:</label> <span>{{p.property_dimentions}}</span></li>
+                                <li><label>Beds:</label> <span>{{p.property_bed}}</span></li>
+                                <li><label>Price:</label> <span>{{p.property_price}}</span></li>
+                                <li><label>Property Status:</label> <span>{{p.property_status}}</span></li>
+                            </ul>
+                        </div>
+                                        
+                        <h4 class="title-2">Facts and Features</h4>
+                        <div class="property-detail-feature-list clearfix mb-45">                            
+                            <ul>
+                                <li>
+                                    <div class="property-detail-feature-list-item">
+                                        <i class="flaticon-double-bed"></i>
+                                        <div>
+                                            <h6>Living Room</h6>
+                                            <small>{{p.property_living_room}}</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="property-detail-feature-list-item">
+                                        <i class="flaticon-double-bed"></i>
+                                        <div>
+                                            <h6>Garage</h6>
+                                            <small>{{p.property_Garage}}</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="property-detail-feature-list-item">
+                                        <i class="flaticon-double-bed"></i>
+                                        <div>
+                                            <h6>Dining Area</h6>
+                                            <small>{{p.property_dinning_area}}</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="property-detail-feature-list-item">
+                                        <i class="flaticon-double-bed"></i>
+                                        <div>
+                                            <h6>Bedroom</h6>
+                                            <small>20 x 16 sq feet</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="property-detail-feature-list-item">
+                                        <i class="flaticon-double-bed"></i>
+                                        <div>
+                                            <h6>Bathroom</h6>
+                                            <small>{{p.porperty_bathroom}}</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="property-detail-feature-list-item">
+                                        <i class="flaticon-double-bed"></i>
+                                        <div>
+                                            <h6>Gym Area</h6>
+                                            <small>{{p.property_gym}}</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="property-detail-feature-list-item">
+                                        <i class="flaticon-double-bed"></i>
+                                        <div>
+                                            <h6>Garden</h6>
+                                            <small>{{p.property_garden}}</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="property-detail-feature-list-item">
+                                        <i class="flaticon-double-bed"></i>
+                                        <div>
+                                            <h6>Parking</h6>
+                                            <small>{{p.property_parking}}</small>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h4 class="title-2">From Our Gallery</h4>
+                        <div class="ltn__property-details-gallery mb-30">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href="{{p.property_gallery.url}}" data-rel="lightcase:myCollection">
+                                        <img class="mb-30" src="{{p.property_gallery.url}}" alt="Image">
+                                    </a>
+                                    <a href="{{p.property_gallery_2.url}}" data-rel="lightcase:myCollection">
+                                        <img class="mb-30" src="{{p.property_gallery_2.url}}" alt="Image">
+                                    </a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="{{p.property_gallery_3.url}}" data-rel="lightcase:myCollection">
+                                        <img class="mb-30" src="{{p.property_gallery_3.url}}" alt="Image">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="title-2 mb-10">{{p.property_amenities}}</h4>
+                        <div class="property-details-amenities mb-60">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="ltn__menu-widget">
+                                        <ul>
+                                            <li>
+                                                <label class="checkbox-item">{{p.property_air_conditioner}}
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox-item">Gym
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox-item">{{p.property_Microwave}}
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox-item">{{p.property_swimmingpool}}
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox-item">{{p.property_wifi}}
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="ltn__menu-widget">
+                                        <ul>
+                                            <li>
+                                                <label class="checkbox-item">{{p.property_laundry}}
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox-item">{{p.property_indoorgames}}
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox-item">{{p.property_outdoorgames}}
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox-item">{{p.property_clubhouse}}
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox-item">{{p.property_security}}
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="ltn__menu-widget">
+                                        <ul>
+                                            <li>
+                                                <label class="checkbox-item">{{p.property_firesafety}}
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox-item">{{p.property_basement_parking}}
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox-item">{{p.property_lift}}
+                                                </label>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="title-2">Location</h4>
+                        <div class="property-details-google-map mb-60">
+                            <iframe src="{{p.property_map_location}}" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        
+
+                        <h4 class="title-2">Related Properties</h4>
+                        <div class="row">
+                            
+                            <!-- ltn__product-item -->
+                            <div class="col-xl-6 col-sm-6 col-12">
+                                <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
+                                    <div class="product-img">
+                                        <a href="#"><img src="{{p.property_img.url}}" alt="#"></a>
+                                        <div class="real-estate-agent">
+                                            <div class="agent-img">
+                                                <a href="{{p.property_agent_img.url}}"><img src="{{p.property_agent_img.url}}" alt="#"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-badge">
+                                            <ul>
+                                                <li class="sale-badg">{{p.property_type}}</li>
+                                            </ul>
+                                        </div>
+                                        <h2 class="product-title"><a href="property\{{p.property_name}}">{{p.property_name}}</a></h2>
+                                        <div class="product-img-location">
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><i class="flaticon-pin"></i> {{p.property_location}}</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+                                            <li><span>{{p.bedroom}} </span>
+                                                Bedrooms
+                                            </li>
+                                            <li><span>{{p.bathroom}} </span>
+                                                Bathrooms
+                                            </li>
+                                            <li><span>{{p.area}} </span>
+                                                square Ft
+                                            </li>
+                                        </ul>
+                                        <div class="product-hover-action">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                                        <i class="flaticon-expand"></i>
+                                                    </a>
+                                                </li>
+                                                {% comment %} <li>
+                                                    <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+                                                        <i class="flaticon-heart-1"></i></a>
+                                                </li> {% endcomment %}
+                                                <li>
+                                                    <a href="porfoliodetails\{{portfolio.portoflio_title}}" title="Compare">
+                                                        <i class="flaticon-add"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-info-bottom">
+                                        <div class="product-price">
+                                            <span>₹{{p.property_price}}<label>/Month</label></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-sm-6 col-12">
+                                <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
+                                    <div class="product-img">
+                                        <a href="#"><img src="{{p.property_img.url}}" alt="#"></a>
+                                        <div class="real-estate-agent">
+                                            <div class="agent-img">
+                                                <a href="{{p.property_agent_img.url}}"><img src="{{p.property_agent_img.url}}" alt="#"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-badge">
+                                            <ul>
+                                                <li class="sale-badg">{{p.property_type}}</li>
+                                            </ul>
+                                        </div>
+                                        <h2 class="product-title"><a href="property\{{p.property_name}}">{{p.property_name}}</a></h2>
+                                        <div class="product-img-location">
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><i class="flaticon-pin"></i> {{p.property_location}}</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+                                            <li><span>{{p.bedroom}} </span>
+                                                Bedrooms
+                                            </li>
+                                            <li><span>{{p.bathroom}} </span>
+                                                Bathrooms
+                                            </li>
+                                            <li><span>{{p.area}} </span>
+                                                square Ft
+                                            </li>
+                                        </ul>
+                                        <div class="product-hover-action">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                                        <i class="flaticon-expand"></i>
+                                                    </a>
+                                                </li>
+                                                {% comment %} <li>
+                                                    <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+                                                        <i class="flaticon-heart-1"></i></a>
+                                                </li> {% endcomment %}
+                                                <li>
+                                                    <a href="porfoliodetails\{{portfolio.portoflio_title}}" title="Compare">
+                                                        <i class="flaticon-add"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-info-bottom">
+                                        <div class="product-price">
+                                            <span>₹{{p.property_price}}<label>/Month</label></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ltn__product-item -->
+                            {% comment %} <div class="col-xl-6 col-sm-6 col-12">
+                                <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
+                                    <div class="product-img">
+                                        <a href="#"><img src="{% static 'img/product-3/2.jpg' %}" alt="#"></a>
+                                        <div class="real-estate-agent">
+                                            <div class="agent-img">
+                                                <a href="#"><img src="{% static 'img/blog/author.jpg' %}" alt="#"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-badge">
+                                            <ul>
+                                                <li class="sale-badg">For Sale</li>
+                                            </ul>
+                                        </div>
+                                        <h2 class="product-title"><a href="#">New Apartment Nice View</a></h2>
+                                        <div class="product-img-location">
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><i class="flaticon-pin"></i> Belmont Gardens, Chicago</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+                                            <li><span>3 </span>
+                                                Bedrooms
+                                            </li>
+                                            <li><span>2 </span>
+                                                Bathrooms
+                                            </li>
+                                            <li><span>3450 </span>
+                                                square Ft
+                                            </li>
+                                        </ul>
+                                        <div class="product-hover-action">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                                        <i class="flaticon-expand"></i>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="porfoliodetails\{{portfolio.portoflio_title}}" title="Compare">
+                                                        <i class="flaticon-add"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-info-bottom">
+                                        <div class="product-price">
+                                            <span>$349,00<label>/Month</label></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> {% endcomment %}
+                        </div>
+                    </div>
+                
+                </div>
+                {% endfor %}
+                {% comment %} {% for client_feedback in propertydetails_page.clientfeedback %} {% endcomment %}
+                <div class="col-lg-4">
+                    <aside class="sidebar ltn__shop-sidebar ltn__right-sidebar---">
+                        <!-- Author Widget -->
+                        {% comment %} {% for i in propertydetails_page.teamData %} {% endcomment %}
+                        <div class="widget ltn__author-widget">
+                            <div class="ltn__author-widget-inner text-center">
+                                <img src="{{ propertydetails_page.teamData.team_profile.url }}" alt="Image">
+                                <h5>{{ propertydetails_page.teamData.team_name }}</h5>
+                                <small>{{ propertydetails_page.teamData.designation }}</small>
+                                <h5>{{ propertydetails_page.teamData.phone }}</h5>
+                                <p>{{ propertydetails_page.teamData.starting_content }}</p>
+                                <div class="ltn__social-media">
+                                    <ul>
+                                        <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                                        
+                                        <li><a href="#" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        {% comment %} {% endfor %} {% endcomment %}
+                        <!-- Search Widget -->
+                        {% comment %} <div class="widget ltn__search-widget">
+                            <h4 class="ltn__widget-title ltn__widget-title-border-2">Search Objects</h4>
+                            <form action="#">
+                                <input type="text" name="search" placeholder="Search your keyword...">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div> {% endcomment %}
+                        <!-- Form Widget -->
+                        {% comment %} <div class="widget ltn__form-widget">
+                            <h4 class="ltn__widget-title ltn__widget-title-border-2">Drop Messege For Book</h4>
+                            <form action="#">
+                                <input type="text" name="yourname" placeholder="Your Name*">
+                                <input type="text" name="youremail" placeholder="Your e-Mail*">
+                                <textarea name="yourmessage" placeholder="Write Message..."></textarea>
+                                <button type="submit" class="btn theme-btn-1">Send Messege</button>
+                            </form>
+                        </div> {% endcomment %}
+                        <!-- Top Rated Product Widget -->
+                        {% comment %} <div class="widget ltn__top-rated-product-widget">
+                            <h4 class="ltn__widget-title ltn__widget-title-border-2">Top Rated Product</h4>
+                            <ul>
+                                <li>
+                                    <div class="top-rated-product-item clearfix">
+                                        <div class="top-rated-product-img">
+                                            <a href="#"><img src="{% static 'img/product/1.png' %}" alt="#"></a>
+                                        </div>
+                                        <div class="top-rated-product-info">
+                                            <div class="product-ratting">
+                                                <ul>
+                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <h6><a href="#">Luxury House In Greenville </a></h6>
+                                            <div class="product-price">
+                                                <span>$30,000.00</span>
+                                                <del>$35,000.00</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top-rated-product-item clearfix">
+                                        <div class="top-rated-product-img">
+                                            <a href="#"><img src="{% static 'img/product/2.png' %}" alt="#"></a>
+                                        </div>
+                                        <div class="top-rated-product-info">
+                                            <div class="product-ratting">
+                                                <ul>
+                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <h6><a href="#">Apartment with Subunits</a></h6>
+                                            <div class="product-price">
+                                                <span>$30,000.00</span>
+                                                <del>$35,000.00</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top-rated-product-item clearfix">
+                                        <div class="top-rated-product-img">
+                                            <a href="#"><img src="{% static 'img/product/3.png' %}" alt="#"></a>
+                                        </div>
+                                        <div class="top-rated-product-info">
+                                            <div class="product-ratting">
+                                                <ul>
+                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                                    <li><a href="#"><i class="far fa-star"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <h6><a href="#">3 Rooms Manhattan</a></h6>
+                                            <div class="product-price">
+                                                <span>$30,000.00</span>
+                                                <del>$35,000.00</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> {% endcomment %}
+                        <!-- Menu Widget (Category) -->
+                        {% comment %} <div class="widget ltn__menu-widget ltn__menu-widget-2--- ltn__menu-widget-2-color-2---">
+                            <h4 class="ltn__widget-title ltn__widget-title-border-2">Top Categories</h4>
+                            <ul>
+                                <li><a href="#">Apartments <span>(26)</span></a></li>
+                                <li><a href="#">Picture Stodio <span>(30)</span></a></li>
+                                <li><a href="#">Office  <span>(71)</span></a></li>
+                                <li><a href="#">Luxary Vilas <span>(56)</span></a></li>
+                                <li><a href="#">Duplex House <span>(60)</span></a></li>
+                            </ul>
+                        </div> {% endcomment %}
+                        <!-- Popular Product Widget -->
+                        <div class="widget ltn__popular-product-widget">       
+                            <h4 class="ltn__widget-title ltn__widget-title-border-2">Popular Properties</h4>                     
+                            <div class="row ltn__popular-product-widget-active slick-arrow-1">
+                                <!-- ltn__product-item -->
+                                {% for p in propertydetails_page.Property_Detailss %}
+                                <div class="col-12">    
+                                    <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
+                                        <div class="product-img">
+                                            <a href="#"><img src="{{p.property_img.url}}" alt="#"></a>
+                                            <div class="real-estate-agent">
+                                                <div class="agent-img">
+                                                    <a href="#"><img src="{{p.property_agent_img.url}}" alt="#"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="product-price">
+                                                <span>₹{{p.property_price}}<label>/Month</label></span>
+                                            </div>
+                                            <h2 class="product-title"><a href="property\{{p.property_name}}">{{p.property_name}}</a></h2>
+                                            <div class="product-img-location">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#"><i class="flaticon-pin"></i> {{p.property_location}}</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+                                                <li><span>{{p.bedroom}} </span>
+                                                    Bedrooms
+                                                </li>
+                                                <li><span>{{p.bathroom}} </span>
+                                                    Bathrooms
+                                                </li>
+                                                <li><span>{{p.area}} </span>
+                                                    square Ft
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <!-- Popular Post Widget -->
+                        <div class="widget ltn__popular-post-widget">
+                            <h4 class="ltn__widget-title ltn__widget-title-border-2">Latest News</h4>
+                            <ul>
+                                {% for News in propertydetails_page.news %}
+                                <li>
+                                    <div class="popular-post-widget-item clearfix">
+                                        <div class="popular-post-widget-img">
+                                            <a href="#"><img src="{{News.News_img.url}}" alt="#"></a>
+                                        </div>
+                                        <div class="popular-post-widget-brief">
+                                            {% comment %} {% url 'blog-details.html' %} {% endcomment %}
+                                            <h6><a href="Newsdetails\{{News.News_Title}}">{{News.News_Title}}</a></h6>
+                                            <div class="ltn__blog-meta">
+                                                <ul>
+                                                    <li class="ltn__blog-date">
+                                                        <a href="#"><i class="far fa-calendar-alt"></i>{{News.News_Date}}</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                                
+                            </ul>
+                        </div>
+                        <!-- Social Media Widget -->
+                        <div class="widget ltn__social-media-widget">
+                            <h4 class="ltn__widget-title ltn__widget-title-border-2">Follow us</h4>
+                            <div class="ltn__social-media-2">
+                                <ul>
+                                    <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                                    <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Banner Widget -->
+                        <div class="widget ltn__banner-widget d-none">
+                            <a href="{% url 'shop.html' %}"><img src="{% static 'img/banner/2.jpg' %}" alt="#"></a>
+                        </div>
+                    </aside>
+                </div>
+                {% comment %} {% endfor %} {% endcomment %}
+                
+            </div>
+        </div>
+    </div>
+    <!-- SHOP DETAILS AREA END -->
+
+    <!-- PRODUCT SLIDER AREA START -->
+    <div class="ltn__product-slider-area ltn__product-gutter pb-70 d-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2--- text-center---">
+                        <h1 class="section-title">Related Properties</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row ltn__related-product-slider-two-active slick-arrow-1">
+                <!-- ltn__product-item -->
+                <div class="col-xl-6 col-sm-6 col-12">
+                    <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
+                        <div class="product-img">
+                            <a href="#"><img src="{% static 'img/product-3/1.jpg' %}" alt="#"></a>
+                            <div class="real-estate-agent">
+                                <div class="agent-img">
+                                    <a href="#"><img src="{% static 'img/blog/author.jpg' %}" alt="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-badge">
+                                <ul>
+                                    <li class="sale-badg">For Rent</li>
+                                </ul>
+                            </div>
+                            <h2 class="product-title"><a href="#">New Apartment Nice View</a></h2>
+                            <div class="product-img-location">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="flaticon-pin"></i> Belmont Gardens, Chicago</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+                                <li><span>3 </span>
+                                    Bed
+                                </li>
+                                <li><span>2 </span>
+                                    Bath
+                                </li>
+                                <li><span>3450 </span>
+                                    Square Ft
+                                </li>
+                            </ul>
+                            <div class="product-hover-action">
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                            <i class="flaticon-expand"></i>
+                                        </a>
+                                    </li>
+                                    {% comment %} <li>
+                                        <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+                                            <i class="flaticon-heart-1"></i></a>
+                                    </li> {% endcomment %}
+                                    <li>
+                                        <a href="porfoliodetails\{{portfolio.portoflio_title}}" title="Compare">
+                                            <i class="flaticon-add"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-info-bottom">
+                            <div class="product-price">
+                                <span>$349,00<label>/Month</label></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ltn__product-item -->
+                <div class="col-xl-6 col-sm-6 col-12">
+                    <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
+                        <div class="product-img">
+                            <a href="#"><img src="{% static 'img/product-3/2.jpg' %}" alt="#"></a>
+                            <div class="real-estate-agent">
+                                <div class="agent-img">
+                                    <a href="#"><img src="{% static 'img/blog/author.jpg' %}" alt="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-badge">
+                                <ul>
+                                    <li class="sale-badg">For Sale</li>
+                                </ul>
+                            </div>
+                            <h2 class="product-title"><a href="#">New Apartment Nice View</a></h2>
+                            <div class="product-img-location">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="flaticon-pin"></i> Belmont Gardens, Chicago</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+                                <li><span>3 </span>
+                                    Bed
+                                </li>
+                                <li><span>2 </span>
+                                    Bath
+                                </li>
+                                <li><span>3450 </span>
+                                    Square Ft
+                                </li>
+                            </ul>
+                            <div class="product-hover-action">
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                            <i class="flaticon-expand"></i>
+                                        </a>
+                                    </li>
+                                    {% comment %} <li>
+                                        <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+                                            <i class="flaticon-heart-1"></i></a>
+                                    </li> {% endcomment %}
+                                    <li>
+                                        <a href="porfoliodetails\{{portfolio.portoflio_title}}" title="Compare">
+                                            <i class="flaticon-add"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-info-bottom">
+                            <div class="product-price">
+                                <span>$349,00<label>/Month</label></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ltn__product-item -->
+                <div class="col-xl-6 col-sm-6 col-12">
+                    <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
+                        <div class="product-img">
+                            <a href="#"><img src="{% static 'img/product-3/3.jpg' %}" alt="#"></a>
+                            <div class="real-estate-agent">
+                                <div class="agent-img">
+                                    <a href="#"><img src="{% static 'img/blog/author.jpg' %}" alt="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-badge">
+                                <ul>
+                                    <li class="sale-badg">For Rent</li>
+                                </ul>
+                            </div>
+                            <h2 class="product-title"><a href="#">New Apartment Nice View</a></h2>
+                            <div class="product-img-location">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="flaticon-pin"></i> Belmont Gardens, Chicago</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+                                <li><span>3 </span>
+                                    Bed
+                                </li>
+                                <li><span>2 </span>
+                                    Bath
+                                </li>
+                                <li><span>3450 </span>
+                                    Square Ft
+                                </li>
+                            </ul>
+                            <div class="product-hover-action">
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                            <i class="flaticon-expand"></i>
+                                        </a>
+                                    </li>
+                                    {% comment %} <li>
+                                        <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+                                            <i class="flaticon-heart-1"></i></a>
+                                    </li> {% endcomment %}
+                                    <li>
+                                        <a href="porfoliodetails\{{portfolio.portoflio_title}}" title="Compare">
+                                            <i class="flaticon-add"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-info-bottom">
+                            <div class="product-price">
+                                <span>$349,00<label>/Month</label></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ltn__product-item -->
+                <div class="col-xl-6 col-sm-6 col-12">
+                    <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
+                        <div class="product-img">
+                            <a href="#"><img src="{% static  'img/product-3/4.jpg' %}" alt="#"></a>
+                            <div class="real-estate-agent">
+                                <div class="agent-img">
+                                    <a href="#"><img src="{% static  'img/blog/author.jpg' %}" alt="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-badge">
+                                <ul>
+                                    <li class="sale-badg">For Rent</li>
+                                </ul>
+                            </div>
+                            <h2 class="product-title"><a href="#">New Apartment Nice View</a></h2>
+                            <div class="product-img-location">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="flaticon-pin"></i> Belmont Gardens, Chicago</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+                                <li><span>3 </span>
+                                    Bed
+                                </li>
+                                <li><span>2 </span>
+                                    Bath
+                                </li>
+                                <li><span>3450 </span>
+                                    Square Ft
+                                </li>
+                            </ul>
+                            <div class="product-hover-action">
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                            <i class="flaticon-expand"></i>
+                                        </a>
+                                    </li>
+                                    {% comment %} <li>
+                                        <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+                                            <i class="flaticon-heart-1"></i></a>
+                                    </li> {% endcomment %}
+                                    <li>
+                                        <a href="porfoliodetails\{{portfolio.portoflio_title}}" title="Compare">
+                                            <i class="flaticon-add"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-info-bottom">
+                            <div class="product-price">
+                                <span>$349,00<label>/Month</label></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ltn__product-item -->
+                <div class="col-xl-6 col-sm-6 col-12">
+                    <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
+                        <div class="product-img">
+                            <a href="#"><img src="{% static 'img/product-3/5.jpg' %}" alt="#"></a>
+                            <div class="real-estate-agent">
+                                <div class="agent-img">
+                                    <a href="#"><img src="{% static 'img/blog/author.jpg' %}" alt="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-badge">
+                                <ul>
+                                    <li class="sale-badg">For Rent</li>
+                                </ul>
+                            </div>
+                            <h2 class="product-title"><a href="#">New Apartment Nice View</a></h2>
+                            <div class="product-img-location">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="flaticon-pin"></i> Belmont Gardens, Chicago</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+                                <li><span>3 </span>
+                                    Bed
+                                </li>
+                                <li><span>2 </span>
+                                    Bath
+                                </li>
+                                <li><span>3450 </span>
+                                    Square Ft
+                                </li>
+                            </ul>
+                            <div class="product-hover-action">
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                            <i class="flaticon-expand"></i>
+                                        </a>
+                                    </li>
+                                    {% comment %} <li>
+                                        <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+                                            <i class="flaticon-heart-1"></i></a>
+                                    </li> {% endcomment %}
+                                    <li>
+                                        <a href="porfoliodetails\{{portfolio.portoflio_title}}" title="Compare">
+                                            <i class="flaticon-add"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-info-bottom">
+                            <div class="product-price">
+                                <span>$349,00<label>/Month</label></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+        </div>
+    </div>
+    <!-- PRODUCT SLIDER AREA END -->
+    {% endblock content %}

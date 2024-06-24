@@ -1,0 +1,645 @@
+{% extends 'header-footer.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- SLIDER AREA START (slider-3) -->
+    <div class="ltn__slider-area ltn__slider-3  section-bg-2">
+        <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
+            <!-- ltn__slide-item -->
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60" data-bs-bg="{% static 'img/slider/11.jpg' %}">
+                <div class="ltn__slide-item-inner text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 align-self-center">
+                                <div class="slide-item-info">
+                                    <div class="slide-item-info-inner ltn__slide-animation">
+                                        <div class="slide-video mb-50 d-none">
+                                            <a class="ltn__video-icon-2 ltn__video-icon-2-border" href="https://www.youtube.com/embed/tlThdr3O5Qo" data-rel="lightcase:myCollection">
+                                                <i class="fa fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <h6 class="slide-sub-title white-color--- animated"><span><i class="fas fa-home"></i></span> Real Estate Website</h6>
+                                        <h1 class="slide-title animated ">Find Your Dream <br> House By Us</h1>
+                                        <div class="slide-brief animated">
+                                            <p>Let us help you find your dream house! With our expertise and personalized service, we'll guide you to your perfect home sweet home.</p>
+                                        </div>
+                                        <div class="btn-wrapper animated">
+                                            <a href="{% url 'shop-grid.html' %}" class="theme-btn-1 btn btn-effect-1">Make An Enquiry</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ltn__slide-item -->
+            <div class="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60" data-bs-bg="{% static 'img/slider/12.jpg' %}">
+                <div class="ltn__slide-item-inner  text-right text-end">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 align-self-center">
+                                <div class="slide-item-info">
+                                    <div class="slide-item-info-inner ltn__slide-animation">
+                                        <h6 class="slide-sub-title white-color--- animated"><span><i class="fas fa-home"></i></span> Real Estate Agency</h6>
+                                        <h1 class="slide-title animated ">Find Your Dream <br> House By Us</h1>
+                                        <div class="slide-brief animated">
+                                            <p>Let us help you find your dream house! With our expertise and personalized service, we'll guide you to your perfect home sweet home.</p>
+                                        </div>
+                                        <div class="btn-wrapper animated">
+                                            <a href="{% url 'shop-grid.html' %}" class="theme-btn-1 btn btn-effect-1">Make An Enquiry</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ltn__slide-item -->
+            <div class="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60" data-bs-bg="{% static 'img/slider/13.jpg' %}">
+                <div class="ltn__slide-item-inner  text-left">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 align-self-center">
+                                <div class="slide-item-info">
+                                    <div class="slide-item-info-inner ltn__slide-animation">
+                                        <h6 class="slide-sub-title white-color--- animated"><span><i class="fas fa-home"></i></span> Real Estate Agency</h6>
+                                        <h1 class="slide-title animated ">Find Your Dream <br> House By Us</h1>
+                                        <div class="slide-brief animated">
+                                            <p>Let us help you find your dream house! With our expertise and personalized service, we'll guide you to your perfect home sweet home.</p>
+                                        </div>
+                                        <div class="btn-wrapper animated">
+                                            <a href="{% url 'shop-grid.html' %}" class="theme-btn-1 btn btn-effect-1">Make An Enquiry</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+        </div>
+    </div>
+    <!-- SLIDER AREA END -->
+
+    <!-- CAR DEALER FORM AREA START -->
+    {% comment %} <div class="ltn__car-dealer-form-area mt--65 mt-120 pb-115---">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ltn__car-dealer-form-tab">
+                        <div class="ltn__tab-menu  text-uppercase d-none">
+                            <div class="nav">
+                                <a class="active show" data-bs-toggle="tab" href="#ltn__form_tab_1_1"><i class="fas fa-car"></i>Find A Car</a>
+                                <a data-bs-toggle="tab" href="#ltn__form_tab_1_2" class=""><i class="far fa-user"></i>Get a Dealer</a>
+                            </div>
+                        </div>
+                        <div class="tab-content bg-white box-shadow-1 ltn__border position-relative pb-10">
+                            <div class="tab-pane fade active show" id="ltn__form_tab_1_1">
+                                <div class="car-dealer-form-inner">
+                                    <form action="#" class="ltn__car-dealer-form-box row">
+                                        <div class="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-car---- col-lg-3 col-md-6">
+                                            <select class="nice-select">
+                                                <option>Choose Area</option>
+                                                <option>chicago</option>
+                                                <option>London</option>
+                                                <option>Los Angeles</option>
+                                                <option>New York</option>
+                                                <option>New Jersey</option>
+                                            </select>
+                                        </div> 
+                                        <div class="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-meter---- col-lg-3 col-md-6">
+                                            <select class="nice-select">
+                                                <option>Property Status</option>
+                                                <option>Open house</option>
+                                                <option>Rent</option>
+                                                <option>Sale</option>
+                                                <option>Sold</option>
+                                            </select>
+                                        </div> 
+                                        <div class="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-calendar---- col-lg-3 col-md-6">
+                                            <select class="nice-select">
+                                                <option>Property Type</option>
+                                                <option>Apartment</option>
+                                                <option>Co-op</option>
+                                                <option>Condo</option>
+                                                <option>Single Family Home</option>
+                                            </select>
+                                        </div>
+                                        <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-3 col-md-6">
+                                            <div class="btn-wrapper text-center mt-0">
+                                                <!-- <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</button> -->
+                                                <a href="{% url 'shop-grid.html' %}" class="btn theme-btn-1 btn-effect-1 text-uppercase">Find Now</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ltn__form_tab_1_2">
+                                <div class="car-dealer-form-inner">
+                                    <form action="#" class="ltn__car-dealer-form-box row">
+                                        <div class="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-car---- col-lg-3 col-md-6">
+                                            <select class="nice-select">
+                                                <option>Choose Area</option>
+                                                <option>chicago</option>
+                                                <option>London</option>
+                                                <option>Los Angeles</option>
+                                                <option>New York</option>
+                                                <option>New Jersey</option>
+                                            </select>
+                                        </div> 
+                                        <div class="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-meter---- col-lg-3 col-md-6">
+                                            <select class="nice-select">
+                                                <option>Property Status</option>
+                                                <option>Open house</option>
+                                                <option>Rent</option>
+                                                <option>Sale</option>
+                                                <option>Sold</option>
+                                            </select>
+                                        </div> 
+                                        <div class="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-calendar---- col-lg-3 col-md-6">
+                                            <select class="nice-select">
+                                                <option>Property Type</option>
+                                                <option>Apartment</option>
+                                                <option>Co-op</option>
+                                                <option>Condo</option>
+                                                <option>Single Family Home</option>
+                                            </select>
+                                        </div>
+                                        <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-3 col-md-6">
+                                            <div class="btn-wrapper text-center mt-0">
+                                                <!-- <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</button> -->
+                                                <a href="{% url 'shop-right-sidebar.html' %}" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search Properties</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> {% endcomment %}
+    <!-- CAR DEALER FORM AREA END -->
+
+    <!-- FEATURE AREA START ( Feature - 6) -->
+    <div class="ltn__feature-area section-bg-1--- pt-115 pb-90 mb-120---">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2--- text-center">
+                        <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Our Services</h6>
+                        <h1 class="section-title">Our Main Focus</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row ltn__custom-gutter---  justify-content-center">
+                {% for service in index.services %}
+                    {% if service.Service_Title == "Home-Buying" or service.Service_Title == "Home-Selling" %}
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white box-shadow-1">
+                            <div class="ltn__feature-icon">
+                                <!-- <span><i class="flaticon-house"></i></span> -->
+                                <img src="{% static 'img/icons/icon-img/21.png' %}" alt="#">
+                            </div>
+                            <div class="ltn__feature-info">
+                                <h3><a {% if user.is_authenticated %} href="servicedetails\{{service.Service_Title}}"{% endif %}>{{ service.Service_Title }}</a></h3>
+                                <p>{{ service.Service_Description }}</p>
+                                <a class="ltn__service-btn" href="servicedetails\{{service.Service_Title}}">Find A Home <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- FEATURE AREA END -->
+
+    <!-- SEARCH BY PLACE AREA START (testimonial-7) -->
+    <div class="ltn__search-by-place-area section-bg-1 before-bg-top--- bg-image-top--- pt-115 pb-70" data-bs-bg="{% static 'img/bg/20.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2--- text-center">
+                        <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Area Properties</h6>
+                        <h1 class="section-title">Properties By Location</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row ltn__search-by-place-slider-1-active slick-arrow-1">
+                {% for p in index.property_by_location %}
+                <div class="col-lg-4">
+                    <div class="ltn__search-by-place-item">
+                        <div class="search-by-place-img">
+                            <a href="#"><img src="{{p.property_img}}" class="propertylocation" alt="#"></a>
+                            <div class="search-by-place-badge">
+                                <ul>
+                                    <li>{{p.number_of_properties}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="search-by-place-info">
+                            <h6><a {% if user.is_authenticated %} href="area\{{p.property_subarea}}"{% endif %}>{{p.property_subarea}}</a></h6>
+                            <h4><a {% if user.is_authenticated %} href="area\{{p.property_subarea}}"{% endif %}>{{p.property_location}}</a></h4>
+                            <div class="search-by-place-btn">
+                                <a {% if user.is_authenticated %} href="area\{{p.property_subarea}}"{% endif %}>View Property <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% comment %} <div class="col-lg-4">
+                    <div class="ltn__search-by-place-item">
+                        <div class="search-by-place-img">
+                            <a href="#"><img src="{% static 'img/product-3/2.jpg' %}" alt="#"></a>
+                            <div class="search-by-place-badge">
+                                <ul>
+                                    <li>5 Properties</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="search-by-place-info">
+                            <h6><a href="locations.html">New York</a></h6>
+                            <h4><a href="#">Pacific Heights Area</a></h4>
+                            <div class="search-by-place-btn">
+                                <a href="#">View Property <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ltn__search-by-place-item">
+                        <div class="search-by-place-img">
+                            <a href="#"><img src="{% static 'img/product-3/3.jpg' %}" alt="#"></a>
+                            <div class="search-by-place-badge">
+                                <ul>
+                                    <li>9 Properties</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="search-by-place-info">
+                            <h6><a href="locations.html">Sedona, Arizona</a></h6>
+                            <h4><a href="#">Noe Valley Zones</a></h4>
+                            <div class="search-by-place-btn">
+                                <a href="#">View Property <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ltn__search-by-place-item">
+                        <div class="search-by-place-img">
+                            <a href="#"><img src="{% static 'img/product-3/2.jpg' %}" alt="#"></a>
+                            <div class="search-by-place-badge">
+                                <ul>
+                                    <li>5 Properties</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="search-by-place-info">
+                            <h6><a href="locations.html">New York</a></h6>
+                            <h4><a href="#">Pacific Heights Area</a></h4>
+                            <div class="search-by-place-btn">
+                                <a href="#">View Property <i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  --> {% endcomment %}
+            </div>
+        </div>
+    </div>
+    <!-- SEARCH BY PLACE AREA END -->
+
+    <!-- PRODUCT SLIDER AREA START -->
+    <div class="ltn__product-slider-area ltn__product-gutter pt-115 pb-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2--- text-center">
+                        <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Properties</h6>
+                        <h1 class="section-title">Featured Listings</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row ltn__product-slider-item-three-active slick-arrow-1">
+                <!-- ltn__product-item -->
+                {% for p in index.Property_Details %}
+                <div class="col-lg-12">
+                    <div class="ltn__product-item ltn__product-item-4 text-center---">
+                        <div class="product-img">
+                            <a {% if user.is_authenticated %} href="property\{{p.property_name}}"{% endif %}><img src="{{p.property_img}}" class="featuredlisting" alt="#"></a>
+                            <div class="product-badge">
+                                <ul>
+                                    <li class="sale-badge bg-green">{{p.property_type}}</li>
+                                </ul>
+                            </div>
+                            <div class="product-img-location-gallery">
+                                <div class="product-img-location">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i class="flaticon-pin"></i> {{p.property_location}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-img-gallery">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i class="fas fa-camera"></i> 4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fas fa-film"></i> 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-price">
+                                <span>₹{{p.property_price}}<label>/Month</label></span>
+                            </div>
+                            <h2 class="product-title"><a {% if user.is_authenticated %} href="property\{{p.property_name}}"{% endif %}>{{p.property_name}}</a></h2>
+                            <div class="product-description">
+                                <p>Beautiful Huge 1 Family House In Heart Of <br>
+                                    Westbury. Newly Renovated With New Wood</p>
+                            </div>
+                            <ul class="ltn__list-item-2 ltn__list-item-2-before">
+                                <li><span>{{p.property_bed}} <i class="flaticon-bed"></i></span>
+                                    Bedrooms
+                                </li>
+                                <li><span>{{p.property_baths}} <i class="flaticon-clean"></i></span>
+                                    Bathrooms
+                                </li>
+                                <li><span>{{p.property_area}} <i class="flaticon-square-shape-design-interface-tool-symbol"></i></span>
+                                    square Ft
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-info-bottom">
+                            <div class="real-estate-agent">
+                                <div class="agent-img">
+                                    <a href="#"><img src="{{p.property_agent_img}}" alt="#"></a>
+                                </div>
+                                <div class="agent-brief">
+                                    <h6><a href="#">{{j.team_name}}Vidhyut Dudhat</a></h6>
+                                    <small>Agents</small>
+                                </div>
+                            </div>
+                            <div class="product-hover-action">
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                            <i class="flaticon-expand"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+                                            <i class="flaticon-heart-1"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Product Details">
+                                            <i class="flaticon-add"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- ltn__product-item -->
+                <div class="col-lg-12">
+                    <div class="ltn__product-item ltn__product-item-4 text-center---">
+                        <div class="product-img">
+                            <a href="#"><img src="{% static 'img/product-3/2.jpg' %}" alt="#"></a>
+                            <div class="product-badge">
+                                <ul>
+                                    <li class="sale-badge bg-green---">For Sale</li>
+                                </ul>
+                            </div>
+                            <div class="product-img-location-gallery">
+                                <div class="product-img-location">
+                                    <ul>
+                                        <li>
+                                            <a href="locations.html"><i class="flaticon-pin"></i> Belmont Gardens, Chicago</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-img-gallery">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i class="fas fa-camera"></i> 4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fas fa-film"></i> 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-price">
+                                <span>$34,900<label>/Month</label></span>
+                            </div>
+                            <h2 class="product-title"><a href="#">Modern Apartments</a></h2>
+                            <div class="product-description">
+                                <p>Beautiful Huge 1 Family House In Heart Of <br>
+                                    Westbury. Newly Renovated With New Wood</p>
+                            </div>
+                            <ul class="ltn__list-item-2 ltn__list-item-2-before">
+                                <li><span>3 <i class="flaticon-bed"></i></span>
+                                    Bedrooms
+                                </li>
+                                <li><span>2 <i class="flaticon-clean"></i></span>
+                                    Bathrooms
+                                </li>
+                                <li><span>3450 <i class="flaticon-square-shape-design-interface-tool-symbol"></i></span>
+                                    square Ft
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-info-bottom">
+                            <div class="real-estate-agent">
+                                <div class="agent-img">
+                                    <a href="#"><img src="{% static 'img/blog/author.jpg' %}" alt="#"></a>
+                                </div>
+                                <div class="agent-brief">
+                                    <h6><a href="#">William Seklo</a></h6>
+                                    <small>Estate Agents</small>
+                                </div>
+                            </div>
+                            <div class="product-hover-action">
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                            <i class="flaticon-expand"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+                                            <i class="flaticon-heart-1"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Product Details">
+                                            <i class="flaticon-add"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- PRODUCT SLIDER AREA END -->
+
+    <!-- VIDEO AREA START -->
+    <div class="ltn__video-popup-area ltn__video-popup-margin---">
+        <div class="ltn__video-bg-img ltn__video-popup-height-600--- bg-overlay-black-30 bg-image bg-fixed ltn__animation-pulse1" data-bs-bg="{% static 'img/bg/19.jpg' %}">
+            <a class="ltn__video-icon-2 ltn__video-icon-2-border---" href="https://www.youtube.com/embed/X7R-q9rsrtU?autoplay=1&amp;showinfo=0" data-rel="lightcase:myCollection">
+                <i class="fa fa-play"></i>
+            </a>
+        </div>
+    </div>
+    <!-- VIDEO AREA END -->
+
+    <!-- CLient Feedback -->
+    <div class="ltn__testimonial-area ltn__testimonial-4 pt-115 pb-100 plr--9">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2--- text-center">
+                        <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Our Testimonial</h6>
+                        <h1 class="section-title">Clients Feedback</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ltn__testimonial-slider-4 ltn__testimonial-slider-4-active slick-arrow-1">
+                        {% for client_feedback in index.clientfeedback %}
+                        <div class="ltn__testimonial-item-5">
+                            <div class="ltn__quote-icon">
+                                <i class="far fa-comments"></i>
+                            </div>
+                            <div class="ltn__testimonial-image">
+                                <img src="{{ client_feedback.Client_image }}" alt="quote">
+                            </div>
+                            <div class="ltn__testimonial-info">
+                                <p>{{ client_feedback.Client_Feedback }}  </p>
+                                <h4>{{ client_feedback.Client_name }}</h4>
+                                <h6>{{ client_feedback.Client_designation }}</h6>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <ul class="ltn__testimonial-quote-menu d-none d-lg-block">
+                        <li><img src="{% static 'img/testimonial/1.jpg' %}" alt="Quote image"></li>
+                        <li><img src="{% static 'img/testimonial/2.jpg' %}" alt="Quote image"></li>
+                        <li><img src="{% static 'img/testimonial/3.jpg' %}" alt="Quote image"></li>
+                        <li><img src="{% static 'img/testimonial/4.jpg' %}" alt="Quote image"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- TESTIMONIAL AREA END -->
+
+    <!-- BRAND LOGO AREA START -->
+    <div class="ltn__brand-logo-area ltn__brand-logo-1 section-bg-1 pt-110 pb-110 plr--9 d-none---">
+        <div class="container-fluid">
+            <div class="row ltn__brand-logo-active">
+                <div class="col-lg-12">
+                    <div class="ltn__brand-logo-item">
+                        <img src="{% static 'img/company-img/download.png' %}" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__brand-logo-item">
+                        <img src="{% static 'img/company-img/download-2.png' %}" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__brand-logo-item">
+                        <img src="{% static 'img/company-img/download-3.png' %}" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__brand-logo-item">
+                        <img src="{% static 'img/company-img/download-4.png' %}" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__brand-logo-item">
+                        <img src="{% static 'img/company-img/download-5.png' %}" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__brand-logo-item">
+                        <img src="{% static 'img/company-img/download-2.png' %}" alt="Brand Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BRAND LOGO AREA END -->
+
+    <!-- BLOG AREA START (blog-3) -->
+    <div class="ltn__blog-area pt-120 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2--- text-center">
+                        <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">News & Blogs</h6>
+                        <h1 class="section-title">Latest News Feeds</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row  ltn__blog-slider-one-active slick-arrow-1 ltn__blog-item-3-normal">
+                
+                {% for News in index.news %}
+                <div class="col-lg-12">
+                    <div class="ltn__blog-item ltn__blog-item-3">
+                        <div class="ltn__blog-img">
+                            <a href="#"><img src="{{News.News_img}}" alt="#"></a>
+                        </div>
+                        <div class="ltn__blog-brief">
+                            <div class="ltn__blog-meta">
+                                <ul>
+                                    <li class="ltn__blog-author">
+                                        <a href="#"><i class="far fa-user"></i>{{News.News_By}}</a>
+                                    </li>
+                                    <li class="ltn__blog-tags">
+                                        <a href="#"><i class="fas fa-tags"></i>{{News.News_type}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3 class="ltn__blog-title"><a {% if user.is_authenticated %} href="Newsdetails\{{News.News_Title}}"{% endif %}>{{News.News_Title}}</a></h3>
+                            <div class="ltn__blog-meta-btn">
+                                <div class="ltn__blog-meta">
+                                    <ul>
+                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>{{News.News_Date}}</li>
+                                    </ul>
+                                </div>
+                                <div class="ltn__blog-btn">
+                                    <a {% if user.is_authenticated %} href="{% url 'blog-grid.html' %}" {% endif %}>Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+    <!-- BLOG AREA END -->
+
+    
+    {% endblock content %}

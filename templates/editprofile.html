@@ -1,0 +1,137 @@
+{% extends 'other-ft-ht.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- BREADCRUMB AREA START -->
+    <div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image "  data-bs-bg="{% static 'img/bg/14.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ltn__breadcrumb-inner">
+                        <h1 class="page-title">My Account</h1>
+                        <div class="ltn__breadcrumb-list">
+                            <ul>
+                                <li><a href="index.html"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Home</a></li>
+                                <li>My Account</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMB AREA END -->
+    <div class="ltn__login-area pb-65">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area text-center">
+                        <h1 class="section-title">Edit User Profile <br> Account</h1>
+                        <p>Update your profile information here. Thank you for keeping your details up-to-date.</p>
+                        <h4>
+                            {% if messages %}
+                                {% for message in messages %}
+            
+                                {{ message }}
+                                
+                                {% endfor %}
+                            {% endif %}
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- WISHLIST AREA START -->
+    <div class="liton__wishlist-area pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- PRODUCT TAB AREA START -->
+                    <div class="ltn__product-tab-area">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="ltn__tab-menu-list mb-50">
+                                        <div class="nav">                                            
+                                            <a class="active show" data-bs-toggle="tab" href="#ltn_tab_1_1">Dashboard <i class="fas fa-home"></i></a>
+                                            {% comment %} <a data-bs-toggle="tab" href="#ltn_tab_1_2">Profiles <i class="fas fa-user"></i></a> {% endcomment %}
+                                            {% comment %} <a data-bs-toggle="tab" href="#ltn_tab_1_3">address <i class="fas fa-map-marker-alt"></i></a> {% endcomment %}
+                                            <a data-bs-toggle="tab" href="{% url 'edit_profile_user' %}#ltn_tab_1_4">Account Details <i class="fas fa-user"></i></a>
+                                           
+                                            <a href="{% url 'logout' %}">Logout <i class="fas fa-sign-out-alt"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade active show" id="ltn_tab_1_1">
+                                            {% if user.is_authenticated %}
+                                            <div class="ltn__myaccount-tab-content-inner">
+                                                <p>Hello <strong>{{ user.username }}</strong> (not <strong>{{ user.username }}</strong>? <small><a href="{% url 'login.html' %}">Log out</a></small> )</p>
+                                                {% comment %} <p>From your account dashboard you can view your <span>recent orders</span>, manage your <span>shipping and billing addresses</span>, and <span>edit your password and account details</span>.</p> {% endcomment %}
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                        <div class="tab-pane fade" id="ltn_tab_1_4">
+                                            <div class="ltn__myaccount-tab-content-inner">
+                                                <p>The following page will be used to edit the User Profile details.</p>
+                                                <div class="ltn__form-box">
+                                                    <form action="" method="POST">
+                                                        {% csrf_token %}
+                                                            <div class="row mb-50">
+                                                                {% comment %} <div class="col-md-6">
+                                                                    <label>Username:</label>
+                                                                    <input type="text" name="ltn__name">
+                                                                </div> {% endcomment %}
+                                                                {% comment %} <div class="col-md-6">
+                                                                    <label>First name:</label>
+                                                                    <input type="text" name="ltn__name">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label>Last name:</label>
+                                                                    <input type="text" name="ltn__lastname">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label>Gender:</label>      
+                                                                    <input type="text" name="ltn__lastname">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label>Email:</label>
+                                                                    <input type="email" name="ltn__lastname" placeholder="example@example.com">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <br>
+                                                                    <label>Date Of Birth:</label>
+                                                                    <input type="date" name="ltn__lastname">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label>Contact:</label>
+                                                                    <input type="text" name="ltn__lastname" placeholder="1234567891">
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label>Location:</label>
+                                                                    <input type="text" name="ltn__lastname" placeholder="1234567891">
+                                                                </div> {% endcomment %}
+                                                                {{ form.as_p }}
+                                                            </div>
+                                                            <div class="btn-wrapper">
+                                                                <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Edit Profile</button>
+                                                            </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PRODUCT TAB AREA END -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- WISHLIST AREA START -->
+
+    {% endblock content %}

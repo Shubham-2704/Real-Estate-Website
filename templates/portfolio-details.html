@@ -1,0 +1,156 @@
+{% extends 'other-ft-ht.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- BREADCRUMB AREA START -->
+    <div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image "  data-bs-bg="{% static 'img/bg/14.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ltn__breadcrumb-inner">
+                        <h1 class="page-title">Portfolio Details</h1>
+                        <div class="ltn__breadcrumb-list">
+                            <ul>
+                                <li><a href="index.html"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Home</a></li>
+                                <li>Portfolio Details</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMB AREA END -->
+
+    <!-- PAGE DETAILS AREA START (portfolio-details) -->
+    <div class="ltn__page-details-area ltn__portfolio-details-area mb-105">
+        <div class="container">
+            <div class="row">
+                {% for portfolio in porfolio_details %}
+                <div class="col-lg-8">
+                    <div class="ltn__page-details-inner ltn__portfolio-details-inner">
+                        <div class="ltn__blog-img">
+                            <img src="{{portfolio.portfolio_image.url}}" alt="Image">
+                        </div>
+                        {% comment %} <p> <span class="ltn__first-letter">W</span>{{portfolio.portfolio_Descriptiion}}</p> {% endcomment %}
+                        <h2>{{portfolio.portoflio_title}}</h2>
+                        <p>{{portfolio.portfolio_Descriptiion}} </p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="ltn__testimonial-item ltn__testimonial-item-3">
+                                    <div class="ltn__testimonial-img">
+                                        <img src="{{portfolio.Portfolio_card_image.url}}" alt="Image">
+                                    </div>
+                                    <div class="ltn__testimoni-info">
+                                        <p>{{portfolio.portfolio_caption}} </p>
+                                        <div class="ltn__testimoni-info-inner">
+                                            <div class="ltn__testimoni-img">
+                                                <img src="{{portfolio.portfolio_author_img.url}}" alt="Image">
+                                            </div>
+                                            <div class="ltn__testimoni-name-designation">
+                                                <h4>{{portfolio.portfolio_author}}</h4>
+                                                <h6>{{portfolio.portofolio_founder}}</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ltn__testimoni-bg-icon">
+                                            <i class="far fa-comments"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="ltn__testimonial-item ltn__testimonial-item-3">
+                                    <div class="ltn__testimonial-img">
+                                        <img src="{{portfolio.Portfolio_card_two.url}}" alt="Image">
+                                    </div>
+                                    <div class="ltn__testimoni-info">
+                                        <p>{{portfolio.portfolio_caption_two}} </p>
+                                        <div class="ltn__testimoni-info-inner">
+                                            <div class="ltn__testimoni-img">
+                                                <img src="{{portfolio.portfolio_author_img_two.url}}" alt="Image">
+                                            </div>
+                                            <div class="ltn__testimoni-name-designation">
+                                                <h4>{{portfolio.portfolio_author_two}}</h4>
+                                                <h6>{{portfolio.portofolio_founder_2}}</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ltn__testimoni-bg-icon">
+                                            <i class="far fa-comments"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>{{portfolio.portfolio_Heading_1}}</p>
+                        <p>{{portfolio.portfolio_description_1}}</p>
+                        <p>{{portfolio.portfolio_Heading_2}}</p>
+                        <p>{{portfolio.portfolio_description_2}}</p>
+                        <p>{{portfolio.portfolio_Heading_3}}</p>
+                        <p>{{portfolio.portfolio_description_3}}</p>
+                        <p>{{portfolio.portfolio_Heading_4}}</p>
+                        <p>{{portfolio.portfolio_description_4}}</p>
+                        <p>{{portfolio.portfolio_Heading_5}}</p>
+                        <p>{{portfolio.portfolio_description_5}}</p>
+                        <p>{{portfolio.portfolio_Heading_6}}</p>
+                        <p>{{portfolio.portfolio_description_6}}</p>
+                        <p>{{portfolio.portfolio_Heading_7}}</p>
+                        <p>{{portfolio.portfolio_description_7}}</p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="{{portfolio.portoflio_Gallery_1.url}}" alt="Image">
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="{{portfolio.portoflio_Gallery_2.url}}" alt="Image">
+                            </div>
+                        </div>
+                        <p>{{portfolio.portfolio_description_end}} </p>
+                        {% comment %} <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p> {% endcomment %}
+                            {% comment %} <div class="ltn__service-list-menu text-uppercase mt-50 d-none">
+                                <ul>
+                                    <li><i class="fas fa-car"></i> Front Brakes Repair <span class="service-price">$225.95 <span>Plus Parts</span></span> </li>
+                                    <li><i class="fas fa-life-ring"></i> Rear Brakes Repair <span class="service-price">$225.95 <span>Plus Parts</span></span> </li>
+                                    <li><i class="fas fa-cog"></i>   Axle <span class="service-price">$225.95 <span>Plus Parts</span></span> </li>
+                                    <li><i class="fas fa-car"></i> Starters / Alternators <span class="service-price">$225.95 <span>Plus Parts</span></span> </li>
+                                </ul>
+                            </div> {% endcomment %}
+
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="col-lg-4">
+                    <aside class="sidebar-area ltn__right-sidebar">
+                        <!-- Menu Widget -->
+                        <div class="widget-2 ltn__menu-widget ltn__menu-widget-2 text-uppercase">
+                            <ul>
+                                <li><a href="#">Property Management <span><i class="fas fa-arrow-right"></i></span></a></li>
+                                <li class="active"><a href="#">Mortgage Service <span><i class="fas fa-arrow-right"></i></span></a></li>
+                                <li><a href="#">Consulting Service <span><i class="fas fa-arrow-right"></i></span></a></li>
+                                <li><a href="#">Home Buying <span><i class="fas fa-arrow-right"></i></span></a></li>
+                                <li><a href="#">Home Selling <span><i class="fas fa-arrow-right"></i></span></a></li>
+                                <li><a href="#">Escrow Services <span><i class="fas fa-arrow-right"></i></span></a></li>
+                            </ul>
+                        </div>
+                        <!-- Newsletter Widget -->
+                        <div class="widget ltn__search-widget ltn__newsletter-widget">                            
+                            <h6 class="ltn__widget-sub-title">// subscribe</h6>
+                            <h4 class="ltn__widget-title">Get Newsletter</h4>
+                            <form action="#">
+                                <input type="text" name="search" placeholder="Search">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                            <div class="ltn__newsletter-bg-icon">
+                                <i class="fas fa-envelope-open-text"></i>
+                            </div>
+                        </div>
+                        <!-- Banner Widget -->
+                        <div class="widget ltn__banner-widget">
+                            <a href="{% url 'shop.html' %}"><img src="{% static  'img/banner/banner-2.jpg' %}" alt="Banner Image"></a>
+                        </div>
+
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PAGE DETAILS AREA END -->
+    {% endblock content %}
